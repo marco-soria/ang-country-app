@@ -5,8 +5,8 @@ import { Country } from '../../../interfaces/country.interface';
 @Component({
   selector: 'app-country-information',
   imports: [DecimalPipe],
-  templateUrl: './country-information.component.html',
-  styleUrl: './country-information.component.css',
+  templateUrl: './country-information.html',
+  styleUrl: './country-information.css',
 })
 export class CountryInformationComponent {
   country = input.required<Country>();

@@ -3,8 +3,8 @@ import { Component, effect, input, linkedSignal, output } from '@angular/core';
 @Component({
   selector: 'app-search-input',
   imports: [],
-  templateUrl: './search-input.component.html',
-  styleUrl: './search-input.component.css',
+  templateUrl: './search-input.html',
+  styleUrl: './search-input.css',
 })
 export class SearchInputComponent {
   placeholder = input('Buscar');

@@ -1,11 +1,11 @@
-import { Component, inject, linkedSignal, signal } from '@angular/core';
+import { Component, inject, linkedSignal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
 
-import { CountryListComponent } from '../../components/country-list/country-list.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CountryListComponent } from '../../components/country-list/country-list';
 import { Region } from '../../interfaces/region.type';
 import { CountryService } from '../../services/country.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 function validateQueryParam(queryParam: string): Region {
   queryParam = queryParam.toLowerCase();
@@ -25,7 +25,7 @@ function validateQueryParam(queryParam: string): Region {
 @Component({
   selector: 'app-by-region-page',
   imports: [CountryListComponent],
-  templateUrl: './by-region-page.component.html',
+  templateUrl: './by-region-page.html',
 })
 export class ByRegionPageComponent {
   countryService = inject(CountryService);
@@ -49,19 +49,19 @@ export class ByRegionPageComponent {
   );
 
   countryResource = rxResource({
-    request: () => ({ region: this.selectedRegion() }),
-    loader: ({ request }) => {
-      console.log({ request: request.region });
+    params: () => ({ region: this.selectedRegion() }),
+    stream: ({ params }) => {
+      console.log({ request: params.region });
 
-      if (!request.region) return of([]);
+      if (!params.region) return of([]);
 
       this.router.navigate(['/country/by-region'], {
         queryParams: {
-          region: request.region,
+          region: params.region,
         },
       });
 
-      return this.countryService.searchByRegion(request.region);
+      return this.countryService.searchByRegion(params.region);
     },
   });
 }

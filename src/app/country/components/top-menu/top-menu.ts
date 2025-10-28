@@ -4,7 +4,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-top-menu',
   imports: [RouterLink, RouterLinkActive],
-  templateUrl: './top-menu.component.html',
-  styleUrl: './top-menu.component.css',
+  templateUrl: './top-menu.html',
+  styleUrl: './top-menu.css',
 })
 export class TopMenuComponent {}

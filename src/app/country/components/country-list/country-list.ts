@@ -6,8 +6,8 @@ import { Country } from '../../interfaces/country.interface';
 @Component({
   selector: 'app-country-list',
   imports: [DecimalPipe, RouterLink],
-  templateUrl: './country-list.component.html',
-  styleUrl: './country-list.component.css',
+  templateUrl: './country-list.html',
+  styleUrl: './country-list.css',
 })
 export class CountryListComponent {
   countries = input.required<Country[]>();

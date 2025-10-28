@@ -4,8 +4,8 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-not-found',
   imports: [],
-  templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.css',
+  templateUrl: './not-found.html',
+  styleUrl: './not-found.css',
 })
 export class NotFoundComponent {
   location = inject(Location);
