@@ -7,4 +7,4 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './top-menu.html',
   styleUrl: './top-menu.css',
 })
-export class TopMenuComponent {}
+export class TopMenu {}

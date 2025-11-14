@@ -8,7 +8,7 @@ import { Country } from '../../../interfaces/country.interface';
   templateUrl: './country-information.html',
   styleUrl: './country-information.css',
 })
-export class CountryInformationComponent {
+export class CountryInformation {
   country = input.required<Country>();
 
   currentYear = computed(() => {

@@ -3,16 +3,16 @@ import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
 
-import { CountryListComponent } from '../../components/country-list/country-list';
-import { SearchInputComponent } from '../../components/search-input/search-input';
+import { CountryList } from '../../components/country-list/country-list';
+import { SearchInput } from '../../components/search-input/search-input';
 import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'app-by-capital-page',
-  imports: [SearchInputComponent, CountryListComponent],
+  imports: [SearchInput, CountryList],
   templateUrl: './by-capital-page.html',
 })
-export class ByCapitalPageComponent {
+export class ByCapitalPage {
   countryService = inject(CountryService);
 
   activatedRoute = inject(ActivatedRoute);

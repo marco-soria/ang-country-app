@@ -2,16 +2,16 @@ import { Component, inject, linkedSignal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { CountryListComponent } from '../../components/country-list/country-list';
-import { SearchInputComponent } from '../../components/search-input/search-input';
+import { CountryList } from '../../components/country-list/country-list';
+import { SearchInput } from '../../components/search-input/search-input';
 import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'app-by-country-page',
-  imports: [SearchInputComponent, CountryListComponent],
+  imports: [SearchInput, CountryList],
   templateUrl: './by-country-page.html',
 })
-export class ByCountryPageComponent {
+export class ByCountryPage {
   countryService = inject(CountryService);
 
   activatedRoute = inject(ActivatedRoute);

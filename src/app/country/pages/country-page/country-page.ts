@@ -1,17 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { NotFoundComponent } from '../../../shared/components/not-found/not-found';
+import { NotFound } from '../../../shared/components/not-found/not-found';
 import { CountryService } from '../../services/country.service';
-import { CountryInformationComponent } from './country-information/country-information';
+import { CountryInformation } from './country-information/country-information';
 
 @Component({
   selector: 'app-country-page',
-  imports: [NotFoundComponent, CountryInformationComponent],
+  imports: [NotFound, CountryInformation],
   templateUrl: './country-page.html',
   styleUrl: './country-page.css',
 })
-export class CountryPageComponent {
+export class CountryPage {
   countryCode = inject(ActivatedRoute).snapshot.params['code'];
   countryService = inject(CountryService);
 

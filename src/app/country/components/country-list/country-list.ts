@@ -9,7 +9,7 @@ import { Country } from '../../interfaces/country.interface';
   templateUrl: './country-list.html',
   styleUrl: './country-list.css',
 })
-export class CountryListComponent {
+export class CountryList {
   countries = input.required<Country[]>();
 
   errorMessage = input<string | unknown | null>();

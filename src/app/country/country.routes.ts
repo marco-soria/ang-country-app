@@ -1,31 +1,31 @@
 import { Routes } from '@angular/router';
-import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page';
-import { CountryLayoutComponent } from './layouts/country-layout/country-layout';
-import { ByCountryPageComponent } from './pages/by-country-page/by-country-page';
-import { ByRegionPageComponent } from './pages/by-region-page/by-region-page';
-import { CountryPageComponent } from './pages/country-page/country-page';
+import { CountryLayout } from './layouts/country-layout/country-layout';
+import { ByCapitalPage } from './pages/by-capital-page/by-capital-page';
+import { ByCountryPage } from './pages/by-country-page/by-country-page';
+import { ByRegionPage } from './pages/by-region-page/by-region-page';
+import { CountryPage } from './pages/country-page/country-page';
 
 export const countryRoutes: Routes = [
   {
     path: '',
-    component: CountryLayoutComponent,
+    component: CountryLayout,
     children: [
       {
         path: 'by-capital',
-        component: ByCapitalPageComponent,
+        component: ByCapitalPage,
       },
       {
         path: 'by-country',
-        component: ByCountryPageComponent,
+        component: ByCountryPage,
       },
       {
         path: 'by-region',
-        component: ByRegionPageComponent,
+        component: ByRegionPage,
       },
 
       {
         path: 'by/:code',
-        component: CountryPageComponent,
+        component: CountryPage,
       },
 
       {

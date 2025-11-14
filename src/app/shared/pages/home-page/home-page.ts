@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +7,4 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
-export class HomePageComponent {}
+export class HomePage {}

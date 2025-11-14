@@ -3,7 +3,7 @@ import { rxResource } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { CountryListComponent } from '../../components/country-list/country-list';
+import { CountryList } from '../../components/country-list/country-list';
 import { Region } from '../../interfaces/region.type';
 import { CountryService } from '../../services/country.service';
 
@@ -24,10 +24,10 @@ function validateQueryParam(queryParam: string): Region {
 
 @Component({
   selector: 'app-by-region-page',
-  imports: [CountryListComponent],
+  imports: [CountryList],
   templateUrl: './by-region-page.html',
 })
-export class ByRegionPageComponent {
+export class ByRegionPage {
   countryService = inject(CountryService);
 
   public regions: Region[] = [
